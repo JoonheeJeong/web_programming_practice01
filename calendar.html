@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./calendar.css">
+  <script src="./calendar.js"></script>
+  <title>HW1_Calander</title>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th id="year_month" colspan="7"></th>
+      </tr>
+      <tr>
+        <th class="sun">日</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th class="sat">土</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td class="sat"><div class="dateDiv"></div></td>
+      </tr>
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td class="sat"><div class="dateDiv"></div></td>
+      </tr>
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td class="sat"><div class="dateDiv"></div></td>
+      </tr>
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td class="sat"><div class="dateDiv"></div></td>
+      </tr>
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td class="sat"><div class="dateDiv"></div></td>
+      </tr>
+      <tr>
+        <td class="sun"><div class="dateDiv"></div></td>
+        <td><div class="dateDiv"></div></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="modal" class="modal">
+    <div id="addScheduleModal" class="modalContents">
+      <div class="message"></div>
+      <input type="text" id="scheduleName"><br />
+      <button id="addButton">Add</button>
+      <button onclick="closeAddScheduleModal();">Cancel</button>
+    </div>
+
+    <div id="changeScheduleModal" class="modalContents">
+      <div class="message">일정 변경</div>
+      <div class="input">
+        <label for="scheduleDate">일정 날짜 변경: </label>
+        <input type="date" id="scheduleDate"><br />
+        <label for="scheduleOrder">일정 순서 변경: </label>
+        <input type="number" id="scheduleOrder"><br />
+      </div>
+      <button id="saveButton">Save</button>
+      <button id="deleteButton">Delete</button>
+    </div>
+  </div>
+
+  <script>
+    setCalendar();
+  </script>
+</body>
+
+</html>
